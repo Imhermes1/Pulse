@@ -44,22 +44,8 @@ struct RootView: View {
 
 struct MainTabView: View {
     var body: some View {
-        TabView {
-            PulseHomeView()
-                .tabItem {
-                    Label("Pulse", systemImage: "waveform.path.ecg")
-                }
-
-            TasksView()
-                .tabItem {
-                    Label("Tasks", systemImage: "checklist")
-                }
-
-            SettingsView()
-                .tabItem {
-                    Label("Settings", systemImage: "gearshape")
-                }
-        }
+        // New unified feed view - no tabs, single beautiful timeline
+        UnifiedFeedView()
     }
 }
 

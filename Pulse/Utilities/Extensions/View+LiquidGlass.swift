@@ -50,6 +50,19 @@ extension View {
             self
         }
     }
+
+    /// Applies glass effect specifically for floating action buttons
+    /// Includes shadow and accessibility support
+    func floatingAction(reduceTransparency: Bool = false) -> some View {
+        self
+            .adaptiveGlassEffect(.regular, reduceTransparency: reduceTransparency)
+            .shadow(
+                color: Color.black.opacity(0.15),
+                radius: 12,
+                x: 0,
+                y: 6
+            )
+    }
 }
 
 // MARK: - Conditional Modifiers
